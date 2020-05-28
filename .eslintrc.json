@@ -1,0 +1,134 @@
+{
+  "parser": "@typescript-eslint/parser",
+  "env": {
+    "browser": true,
+    "jest/globals": true,
+    "es6": true,
+    "node": true
+  },
+  "plugins": ["@typescript-eslint", "react-hooks", "jest", "prettier"],
+  "extends": [
+    "airbnb",
+    "plugin:@typescript-eslint/recommended",
+    "plugin:import/typescript",
+    "plugin:prettier/recommended",
+    "prettier/@typescript-eslint",
+    "plugin:react/recommended"
+  ],
+  "rules": {
+    /**
+     * @description rules of eslint official
+     */
+    /**
+     * @bug https://github.com/benmosher/eslint-plugin-import/issues/1282
+     * "import/named" temporary disable.
+     */
+    "import/named": "off",
+    /**
+     * @bug?
+     * "import/export" temporary disable.
+     */
+    "import/export": "off",
+    //    "arrow-body-style": ["error", "as-needed"],
+    "no-unused-expressions": [
+      "warn",
+      {
+        "allowShortCircuit": true,
+        "allowTernary": true
+      }
+    ], // https://eslint.org/docs/rules/no-unused-expressions
+
+    /**
+     * @description rules of @typescript-eslint
+     */
+    "@typescript-eslint/prefer-interface": "off", // also want to use "type"
+    "@typescript-eslint/explicit-function-return-type": "off", // annoying to force return type
+
+    /**
+     * @description rules of eslint-plugin-react
+     */
+    "react/jsx-filename-extension": [
+      "warn",
+      {
+        "extensions": [".jsx", ".tsx"]
+      }
+    ], // also want to use with ".tsx"
+    "react/prop-types": "off", // Is this incompatible with TS props type?
+
+    /**
+     * @description rules of eslint-plugin-react-hooks
+     */
+    "react-hooks/rules-of-hooks": "error",
+    /**
+     * @description rules for eslint-plugin-jsx-a11y
+     */
+    //    "jsx-a11y/click-events-have-key-events": "warn",
+    //    "jsx-a11y/no-noninteractive-element-interactions": "warn",
+    // Specific for our codebase, mostly quick fixes, most of them are useful though...
+    "@typescript-eslint/interface-name-prefix": ["error", "always"],
+    "@typescript-eslint/camelcase": "off",
+    "import/no-extraneous-dependencies": "off",
+    "react/react-in-jsx-scope": "off",
+    "no-console": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "react/jsx-no-bind": ["off", {}], // TODO!
+    "react/jsx-props-no-spreading": "off",
+    "import/no-cycle": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "import/prefer-default-export": "off",
+    "prefer-destructuring": "off",
+    "default-case": "off",
+    "@typescript-eslint/no-empty-interface": "off",
+    "@typescript-eslint/no-use-before-define": "off",
+    "@typescript-eslint/no-var-requires": "off",
+    "no-plusplus": "off",
+    "react/destructuring-assignment": "off",
+    "consistent-return": "off",
+    "array-callback-return": "off",
+    "global-require": "off",
+    "import/no-named-as-default": "off",
+    "react/button-has-type": "off",
+    "react/state-in-constructor": "off",
+    "no-return-await": "off",
+    "jsx-a11y/label-has-associated-control": "off",
+    "no-nested-ternary": "off",
+    "react/jsx-wrap-multilines": "off",
+    "@typescript-eslint/no-unused-vars": [
+      "error",
+      { "ignoreRestSiblings": true, "argsIgnorePattern": ".*" }
+    ],
+    "react/no-array-index-key": "off",
+    "radix": "off",
+    "react/jsx-one-expression-per-line": "off",
+    "import/no-named-as-default-member": "off",
+    "jsx-a11y/anchor-is-valid": "off",
+    "react/jsx-curly-newline": "off",
+    "@typescript-eslint/ban-ts-ignore": "off",
+    "no-useless-escape": "off",
+    "react/jsx-no-target-blank": "warn",
+    "react/no-unescaped-entities": "off",
+    "no-throw-literal": "off",
+    "jsx-a11y/no-static-element-interactions": "off",
+    "jsx-a11y/click-events-have-key-events": "off",
+    "import/no-named-default": "off",
+    "react/jsx-indent": "off",
+    "jsx-a11y/alt-text": "off",
+    "no-underscore-dangle": "off",
+    "prefer-promise-reject-errors": "off",
+    "max-classes-per-file": "off",
+    "react/display-name": "off",
+    "import/extensions": [
+      "error",
+      "ignorePackages",
+      { "ts": "never", "tsx": "never", "js": "never" }
+    ],
+    "@typescript-eslint/no-empty-function": "off",
+    "@typescript-eslint/consistent-type-assertions": [ // TODO!!! BIG TODO!
+      "off",
+      {
+        "assertionStyle": "angle-bracket",
+        "objectLiteralTypeAssertions": "allow-as-parameter"
+      }
+    ]
+  }
+}

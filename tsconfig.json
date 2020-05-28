@@ -1,26 +1,33 @@
 {
   "compilerOptions": {
-    "noEmit": true,
-    "target": "esnext",
-    "module": "esnext",
-    "jsx": "preserve",
     "allowJs": true,
+    "allowSyntheticDefaultImports": true,
+    "jsx": "preserve",
+    "lib": [
+      "dom",
+      "es2017"
+    ],
+    "module": "esnext",
     "moduleResolution": "node",
-    "esModuleInterop": true,
+    "noEmit": true,
     "noUnusedLocals": true,
+    "noUnusedParameters": true,
     "preserveConstEnums": true,
-    "sourceMap": true,
+    "removeComments": false,
     "skipLibCheck": true,
-    "lib": ["dom", "dom.iterable", "esnext"],
+    "sourceMap": true,
     "strict": true,
+    "target": "esnext",
     "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
     "resolveJsonModule": true,
     "isolatedModules": true
   },
-  "include": [],
   "exclude": [
-    "node_modules",
-    ".next",
-    "bin"
+    "node_modules"
+  ],
+  "include": [
+    "next-env.d.ts",
+    "**/*"
   ]
 }
