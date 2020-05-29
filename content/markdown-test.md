@@ -1,6 +1,6 @@
 ---
 title: "Markdown test"
-date: "2020-05-29 01:54:32"
+date: "2015-03-25T12:00:00-06:30"
 writer: "Matejcsok Istvan"
 image: "asd"
 ---
