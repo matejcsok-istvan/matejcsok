@@ -3,11 +3,14 @@ import styled from "styled-components";
 
 import Header from "../../ui/layout/Header";
 
-const RootDiv = styled.div``;
+const RootDiv = styled.div`
+background: lightgray;
+height: 100vh;
+`;
 
 const IndexPageContainer: FunctionComponent<{}> = props => (
   <RootDiv>
-    <Header title="Home" />
+    <Header page="home" title="Home" />
     <div>matejcsok</div>
   </RootDiv>
 );
