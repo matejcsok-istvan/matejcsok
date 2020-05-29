@@ -6,7 +6,7 @@ import * as matter from "gray-matter";
 import Header from "../../ui/layout/Header";
 
 interface IPostPageContainer {
-  title: string;
+  title: string | undefined;
 }
 
 const RootDiv = styled.div`
@@ -34,6 +34,7 @@ const PostPageContainer: FunctionComponent<IPostPageContainer> = props => {
   useEffect(() => {
     if (props.title) {
       import(`../../../content/${props.title}.md`).then(data => {
+        // @ts-ignore
         setMarkdown(matter(data.default));
       });
     }

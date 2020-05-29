@@ -1,12 +1,12 @@
 // import App from 'next/app'
 import Head from "next/head";
 
-
+//@ts-ignore
 function MyApp({ Component, pageProps }) {
   return (
     <>
       <Head>
-        <title>Matejcsok CV</title>
+        <title>matejcsoki app</title>
       </Head>
       <Component {...pageProps} />
     </>

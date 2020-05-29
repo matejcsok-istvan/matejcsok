@@ -8,6 +8,7 @@ export const readPosts = async () => {
     fileList.map(file => {
       console.log("files", file);
       return import(`../../../content/${file}.md`).then(res => {
+        // @ts-ignore
         const { data } = matter(res.default);
         return {
           title: data.title,

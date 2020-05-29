@@ -7,7 +7,7 @@ const PostPage: NextPage<{}> = () => {
   const router = useRouter();
   const { title } = router.query;
 
-  return <PostPageContainer title={title} />;
+  return <PostPageContainer title={title as string} />;
 };
 
 export default PostPage;
